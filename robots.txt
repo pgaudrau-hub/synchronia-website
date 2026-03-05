@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://synchronia.ca/sitemap.xml
+
+Sitemap: https://www.synchronia.ca/sitemap.xml
