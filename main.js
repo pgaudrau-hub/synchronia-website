@@ -30,8 +30,8 @@ const observer = new IntersectionObserver((entries) => {
         }
 
         // Email obfuscation — assembled at runtime to avoid scrapers
-        var u = 'pgaudrau';
-        var d = 'gmail.com';
+        var u = 'info';
+        var d = 'synchronia.ca';
         var addr = u + '@' + d;
         var mailto = 'mailto:' + addr;
 
@@ -40,7 +40,7 @@ const observer = new IntersectionObserver((entries) => {
         var footerEl = document.getElementById('footer-email');
 
         if (ctaBtn) ctaBtn.href = mailto;
-        if (ctaTxt) { ctaTxt.href = mailto; ctaTxt.textContent = addr; }
+        if (ctaTxt) { ctaTxt.href = mailto; ctaTxt.textContent = 'Écrivez-nous'; }
         if (footerEl) { footerEl.href = mailto; footerEl.textContent = addr; }
     })();
 
