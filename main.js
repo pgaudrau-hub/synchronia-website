@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries) => {
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-(function() {
+;(function() {
         // Hamburger toggle
         const btn = document.getElementById('hamburger-btn');
         const menu = document.getElementById('mobile-menu');
