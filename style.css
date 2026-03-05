@@ -268,10 +268,12 @@
             .nav-desktop { display: none !important; }
             .nav-cta-desktop { display: none !important; }
 
-            .hero-section { min-height: 75vh !important; padding-top: 100px !important; padding-bottom: 60px !important; }
+            .hero-section { min-height: 75vh !important; padding-top: 100px !important; padding-bottom: 60px !important; padding-left: 20px !important; padding-right: 20px !important; }
+            .hero-section > div { padding-left: 0 !important; padding-right: 0 !important; }
+            .hero-section > div > div { max-width: 100% !important; width: 100% !important; }
             .hero-title { font-size: 38px !important; }
             .hero-tagline { font-size: 15px !important; }
-            .hero-desc { font-size: 15px !important; }
+            .hero-desc { font-size: 15px !important; max-width: 100% !important; }
             .hero-buttons { flex-direction: column; }
             .hero-buttons a { width: 100%; justify-content: center; }
             #synapse-canvas { display: none; }
