@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynchronIA — Intelligence Artificielle · Audit & Conseil pour PME</title>
+    <meta name="description" content="SynchronIA rend l'IA accessible et concrète pour les PME. Audit stratégique, implantation sur mesure et plan d'action 90 jours. Basé à Montréal, disponible partout au Québec.">
+    <link rel="canonical" href="https://synchronia.ca/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:title" content="SynchronIA — Intelligence Artificielle · Audit & Conseil pour PME">
+    <meta property="og:description" content="SynchronIA rend l'IA accessible et concrète pour les PME. Audit stratégique, implantation sur mesure et plan d'action 90 jours.">
+    <meta property="og:url" content="https://synchronia.ca/">
+    <meta property="og:site_name" content="SynchronIA">
+    <meta property="og:image" content="https://synchronia.ca/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SynchronIA — Audit & Conseil IA pour PME">
+    <meta name="twitter:description" content="SynchronIA rend l'IA accessible et concrète pour les PME. Basé à Montréal, disponible partout au Québec.">
+    <meta name="twitter:image" content="https://synchronia.ca/og-image.png">
+
+    <!-- Geo targeting -->
+    <meta name="geo.region" content="CA-QC">
+    <meta name="geo.placename" content="Montréal">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Brand/_assets/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- NAVBAR -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <nav aria-label="Navigation principale" style="position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); background:rgba(10,11,13,0.82); border-bottom:1px solid var(--border);">
+        <div style="max-width:1536px; margin:0 auto; padding:0 24px; height:60px; display:flex; align-items:center; justify-content:space-between;">
+            <a href="#" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="rotate(-45 50 50)">
+                        <path d="M 78.5 40.7 A 30 30 0 0 0 21.5 40.7" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M 21.5 59.3 A 30 30 0 0 0 78.5 59.3" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                        <line x1="8" y1="50" x2="92" y2="50" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                        <circle cx="8" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                        <circle cx="50" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                        <circle cx="92" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                    </g>
+                </svg>
+                <span style="font-family:'Fraunces',serif; font-size:20px; font-weight:700; color:var(--text); letter-spacing:-0.02em;">Synchron<span style="color:#E57D61;">IA</span></span>
+            </a>
+            <div class="nav-desktop" style="display:flex; align-items:center; gap:32px;">
+                <a href="#approche" class="nav-link">Approche</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#methode" class="nav-link">Méthode</a>
+                <a href="#zones" class="nav-link">Zones d'audit</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta-desktop" style="display:flex; align-items:center; gap:14px;">
+                <a href="#contact" class="btn-primary" style="padding:8px 18px; font-size:13px;">
+                    Appel découverte gratuit
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" id="hamburger-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+        <a href="#approche" class="nav-link">Approche</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#methode" class="nav-link">Méthode</a>
+        <a href="#zones" class="nav-link">Zones d'audit</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="btn-primary" style="margin-top:16px; padding:13px 28px;">
+            Appel découverte gratuit
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+
+    <main>
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- HERO -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <style>
+        @keyframes hero-fade-up {
+            from { opacity: 0; transform: translateY(32px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-stagger-1 { animation: hero-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+        .hero-stagger-2 { animation: hero-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
+        .hero-stagger-3 { animation: hero-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+        .hero-stagger-4 { animation: hero-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
+        .hero-stagger-5 { animation: hero-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
+
+        #synapse-canvas {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            pointer-events: auto;
+            cursor: crosshair;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 10%, rgba(0,0,0,0.6) 22%, rgba(0,0,0,1) 35%);
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 10%, rgba(0,0,0,0.6) 22%, rgba(0,0,0,1) 35%);
+        }
+    </style>
+    <section class="grain hero-section" style="padding-top:140px; padding-bottom:100px; position:relative; overflow:hidden; min-height:92vh; display:flex; align-items:center;">
+        <!-- Ambient glows -->
+        <div style="position:absolute; top:-15%; right:10%; width:700px; height:700px; background:radial-gradient(ellipse at center, rgba(229,125,97,0.09) 0%, rgba(229,125,97,0.02) 40%, transparent 70%); pointer-events:none;"></div>
+        <div style="position:absolute; bottom:-20%; left:-5%; width:600px; height:600px; background:radial-gradient(ellipse at center, rgba(229,125,97,0.05) 0%, transparent 60%); pointer-events:none;"></div>
+
+        <!-- Interactive synapse canvas -->
+        <canvas id="synapse-canvas" aria-hidden="true"></canvas>
+
+        <div style="max-width:1536px; margin:0 auto; padding:0 24px; position:relative; z-index:2; display:flex; align-items:center; width:100%;">
+            <!-- LEFT: Text content -->
+            <div style="max-width:540px; flex-shrink:0;">
+                <div class="hero-stagger-1" style="display:inline-flex; align-items:center; gap:8px; background:rgba(229,125,97,0.08); border:1px solid rgba(229,125,97,0.15); border-radius:100px; padding:7px 18px 7px 12px; margin-bottom:36px; backdrop-filter:blur(8px);">
+                    <span style="width:7px; height:7px; border-radius:50%; background:#E57D61; display:inline-block; box-shadow:0 0 8px rgba(229,125,97,0.5);"></span>
+                    <span style="font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(229,125,97,0.9); letter-spacing:0.03em;">Consultation IA pour PME</span>
+                </div>
+
+                <h1 class="hero-stagger-2 hero-title" style="font-family:'Fraunces',serif; font-size:64px; font-weight:800; letter-spacing:-0.045em; line-height:1.06; margin-bottom:12px; color:var(--text);">
+                    Activez l'intelligence<br>de votre <span style="background:linear-gradient(135deg, #E57D61 0%, #F5A88A 50%, #E57D61 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">entreprise</span>
+                </h1>
+                <p class="hero-stagger-3 hero-tagline" style="font-family:'Fraunces',serif; font-size:18px; color:var(--text-dim); letter-spacing:-0.01em; margin-bottom:24px; font-weight:400;">Tracer la voie de l'IA pour les PME</p>
+                <p class="hero-stagger-4 hero-desc" style="font-size:16px; color:var(--text-muted); max-width:440px; line-height:1.8; font-family:'DM Sans',sans-serif; font-weight:400; margin-bottom:40px;">
+                    SynchronIA rend l'IA accessible et concrète, à l'échelle de votre PME. De l'audit stratégique à l'implantation sur mesure.
+                </p>
+                <div class="hero-stagger-5 hero-buttons" style="display:flex; gap:16px;">
+                    <a href="#contact" class="btn-primary" style="padding:13px 28px; font-size:14px; border-radius:12px; box-shadow:0 4px 24px rgba(229,125,97,0.35), 0 1px 6px rgba(229,125,97,0.2);">
+                        Réserver un appel découverte
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#services" class="btn-secondary" style="padding:13px 28px; font-size:14px; border-radius:12px;">Voir les services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- 3 KEY CONCEPTS — APPROCHE -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <div class="section-light">
+    <section id="approche" style="padding:100px 24px; max-width:1536px; margin:0 auto;">
+        <div class="fade-in" style="text-align:center; margin-bottom:64px;">
+            <h2 class="section-heading" style="margin-bottom:16px;">Notre approche</h2>
+            <p class="section-subtext" style="margin:0 auto;">Trois principes qui guident chaque intervention. Pas de jargon, pas de solutions génériques — du concret, adapté à votre réalité.</p>
+        </div>
+
+        <div class="grid-3" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+            <!-- Le Pont -->
+            <div class="feature-card" style="overflow:hidden;">
+                <div class="card-visual">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round" style="position:relative; z-index:1; opacity:0.7;">
+                        <path d="M4 19h16M4 15l4-8 4 8M12 15l4-8 4 8"/><line x1="6" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="18" y2="15"/>
+                    </svg>
+                </div>
+                <div style="padding:28px;">
+                    <div style="font-family:'Fraunces',serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#E57D61; margin-bottom:8px;">Concept 1</div>
+                    <h3 style="font-family:'Fraunces',serif; font-size:20px; font-weight:700; margin-bottom:10px; color:#1A1C1F;">Le Pont</h3>
+                    <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:#5A6068; line-height:1.7;">Entre le monde de l'IA qui accélère et l'entrepreneur qui doit performer maintenant. On fait le lien pour vous.</p>
+                </div>
+            </div>
+            <!-- La Clarté -->
+            <div class="feature-card" style="overflow:hidden;">
+                <div class="card-visual">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round" style="position:relative; z-index:1; opacity:0.7;">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                </div>
+                <div style="padding:28px;">
+                    <div style="font-family:'Fraunces',serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#E57D61; margin-bottom:8px;">Concept 2</div>
+                    <h3 style="font-family:'Fraunces',serif; font-size:20px; font-weight:700; margin-bottom:10px; color:#1A1C1F;">La Clarté avant l'outil</h3>
+                    <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:#5A6068; line-height:1.7;">On commence toujours par savoir où on va. Pas d'outil sans diagnostic. Pas de technologie sans stratégie claire.</p>
+                </div>
+            </div>
+            <!-- L'Équité -->
+            <div class="feature-card" style="overflow:hidden;">
+                <div class="card-visual">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round" style="position:relative; z-index:1; opacity:0.7;">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                    </svg>
+                </div>
+                <div style="padding:28px;">
+                    <div style="font-family:'Fraunces',serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#E57D61; margin-bottom:8px;">Concept 3</div>
+                    <h3 style="font-family:'Fraunces',serif; font-size:20px; font-weight:700; margin-bottom:10px; color:#1A1C1F;">L'Équité technologique</h3>
+                    <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:#5A6068; line-height:1.7;">Les avantages de l'IA ne sont pas réservés aux grandes entreprises. Votre PME mérite les mêmes outils.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- SERVICES — 2 VOLETS -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <section id="services" style="padding:100px 24px; max-width:1536px; margin:0 auto;">
+        <div class="fade-in" style="margin-bottom:56px;">
+            <h2 class="section-heading" style="margin-bottom:16px;">Deux volets,<br>une solution complète</h2>
+            <p class="section-subtext">De l'audit stratégique à l'implantation concrète, on vous accompagne à chaque étape. Pas de théorie — du résultat.</p>
+        </div>
+
+        <div class="grid-2" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;">
+            <!-- VOLET 1 — Consultation & Audit -->
+            <div class="feature-card" style="overflow:hidden; position:relative;">
+                <div style="height:180px; background:linear-gradient(135deg, #0f1012, var(--surface-2)); display:flex; align-items:center; justify-content:center; position:relative; border-bottom:1px solid var(--border);">
+                    <div style="position:absolute; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle, rgba(229,125,97,0.15), rgba(229,125,97,0.04) 60%, transparent 70%); filter:blur(20px);"></div>
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.2" stroke-linecap="round" style="position:relative; opacity:0.6;">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/>
+                    </svg>
+                </div>
+                <div style="padding:32px;">
+                    <div style="font-family:'Fraunces',serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#E57D61; margin-bottom:8px;">Volet 1</div>
+                    <h3 style="font-family:'Fraunces',serif; font-size:22px; font-weight:700; margin-bottom:12px; color:var(--text);">Consultation & Audit IA</h3>
+                    <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">Identifier les zones où l'IA peut avoir un impact significatif dans votre entreprise et livrer un plan de match stratégique sur 90 jours.</p>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div style="display:flex; align-items:center; gap:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted);">Diagnostic complet par zones opérationnelles</span></div>
+                        <div style="display:flex; align-items:center; gap:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted);">Rapport avec opportunités priorisées</span></div>
+                        <div style="display:flex; align-items:center; gap:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted);">Feuille de route 90 jours prête à exécuter</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- VOLET 2 — Implantation -->
+            <div class="feature-card" style="overflow:hidden; position:relative;">
+                <div style="height:180px; background:linear-gradient(135deg, var(--surface-1), #0f1012); display:flex; align-items:center; justify-content:center; position:relative; border-bottom:1px solid var(--border);">
+                    <div style="position:absolute; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle, rgba(229,125,97,0.1), rgba(229,125,97,0.02) 60%, transparent 70%); filter:blur(20px);"></div>
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.2" stroke-linecap="round" style="position:relative; opacity:0.6;">
+                        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                </div>
+                <div style="padding:32px;">
+                    <div style="font-family:'Fraunces',serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#E57D61; margin-bottom:8px;">Volet 2</div>
+                    <h3 style="font-family:'Fraunces',serif; font-size:22px; font-weight:700; margin-bottom:12px; color:var(--text);">Implantation IA</h3>
+                    <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">Du diagnostic à l'action. Deux zones d'intervention selon la complexité de vos besoins.</p>
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                        <div style="background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                            <div style="font-family:'Fraunces',serif; font-size:14px; font-weight:600; color:var(--text); margin-bottom:4px;">Zone A — No-Code & interne</div>
+                            <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-dim); line-height:1.6;">Configuration CRM, automatisations Zapier, prompts IA sur mesure. Réalisé directement par Pascal.</p>
+                        </div>
+                        <div style="background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:16px;">
+                            <div style="font-family:'Fraunces',serif; font-size:14px; font-weight:600; color:var(--text); margin-bottom:4px;">Zone B — Développement pro</div>
+                            <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-dim); line-height:1.6;">Applications web, RAG complexe, intégrations API. Délégué à un réseau de partenaires de confiance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- MÉTHODE — 5-STEP AUDIT PROCESS -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <div class="section-light">
+    <section id="methode" style="padding:100px 24px; max-width:1536px; margin:0 auto;">
+        <div class="fade-in" style="margin-bottom:56px;">
+            <h2 class="section-heading" style="margin-bottom:16px;">Processus d'audit en 5 étapes</h2>
+            <p class="section-subtext">Un cadre structuré et éprouvé pour aller de la qualification initiale à l'implantation concrète.</p>
+        </div>
+
+        <div style="background:#FFFFFF; border:1px solid rgba(0,0,0,0.07); border-radius:20px; overflow:hidden; box-shadow:0 2px 16px rgba(229,125,97,0.06), 0 1px 4px rgba(0,0,0,0.03);">
+            <div style="display:flex; align-items:center; gap:8px; padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.06);">
+                <div style="width:12px; height:12px; border-radius:50%; background:#E57D61;"></div>
+                <div style="width:12px; height:12px; border-radius:50%; background:rgba(229,125,97,0.35);"></div>
+                <div style="width:12px; height:12px; border-radius:50%; background:rgba(0,0,0,0.08);"></div>
+                <span style="margin-left:12px; font-family:'DM Sans',sans-serif; font-size:13px; color:#8B9099;">Processus d'audit SynchronIA</span>
+            </div>
+            <div style="padding:32px;">
+                <div class="grid-5" style="display:grid; grid-template-columns:repeat(5, 1fr); gap:16px;">
+                    <!-- Step 1 -->
+                    <div class="step-card" style="background:#F5F4F1; border:1px solid rgba(0,0,0,0.05); border-radius:12px; padding:22px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+                            <div class="step-number" style="width:32px; height:32px; border-radius:10px; background:rgba(229,125,97,0.12); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:#E57D61;">1</div>
+                        </div>
+                        <h3 class="step-title" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin-bottom:6px; color:#1A1C1F;">Qualification</h3>
+                        <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#6B7280; line-height:1.6;">Formulaire pré-audit pour identifier vos douleurs principales.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step-card" style="background:#F5F4F1; border:1px solid rgba(0,0,0,0.05); border-radius:12px; padding:22px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+                            <div class="step-number" style="width:32px; height:32px; border-radius:10px; background:rgba(229,125,97,0.12); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:#E57D61;">2</div>
+                        </div>
+                        <h3 class="step-title" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin-bottom:6px; color:#1A1C1F;">Entrevue d'audit</h3>
+                        <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#6B7280; line-height:1.6;">~60 min d'exploration structurée par zones opérationnelles.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step-card" style="background:#F5F4F1; border:1px solid rgba(0,0,0,0.05); border-radius:12px; padding:22px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+                            <div class="step-number" style="width:32px; height:32px; border-radius:10px; background:rgba(229,125,97,0.12); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:#E57D61;">3</div>
+                        </div>
+                        <h3 class="step-title" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin-bottom:6px; color:#1A1C1F;">Analyse & rapport</h3>
+                        <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#6B7280; line-height:1.6;">Rapport détaillé avec opportunités priorisées par impact.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step-card" style="background:#F5F4F1; border:1px solid rgba(0,0,0,0.05); border-radius:12px; padding:22px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+                            <div class="step-number" style="width:32px; height:32px; border-radius:10px; background:rgba(229,125,97,0.12); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:#E57D61;">4</div>
+                        </div>
+                        <h3 class="step-title" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin-bottom:6px; color:#1A1C1F;">Présentation</h3>
+                        <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#6B7280; line-height:1.6;">Livraison des recommandations et plan d'action 90 jours.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="step-card" style="background:#F5F4F1; border:1px solid rgba(0,0,0,0.05); border-radius:12px; padding:22px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+                            <div class="step-number" style="width:32px; height:32px; border-radius:10px; background:rgba(229,125,97,0.12); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:14px; font-weight:700; color:#E57D61;">5</div>
+                        </div>
+                        <h3 class="step-title" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin-bottom:6px; color:#1A1C1F;">Suivi & implantation</h3>
+                        <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:#6B7280; line-height:1.6;">Passage à l'action : Zone A (Pascal) ou Zone B (partenaire dev).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- 6 ZONES OPÉRATIONNELLES -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <section id="zones" style="padding:100px 24px; max-width:1536px; margin:0 auto;">
+        <div class="fade-in" style="text-align:center; margin-bottom:64px;">
+            <h2 class="section-heading" style="margin-bottom:16px;">6 zones opérationnelles<br>passées au crible</h2>
+            <p class="section-subtext" style="margin:0 auto;">Chaque audit couvre systématiquement ces 6 zones pour ne laisser aucune opportunité de côté.</p>
+        </div>
+
+        <div class="grid-3" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">Acquisition & Marketing</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">Publicité, attribution, génération de leads et optimisation des campagnes.</p>
+            </div>
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">E-commerce & Opérations web</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">Site web, taux de conversion, panier abandonné et parcours client.</p>
+            </div>
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">Gestion des commandes</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">Traitement des commandes, fournisseurs et logistique.</p>
+            </div>
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">Support client & Communications</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">FAQ automatisée, suivi client, chatbots et automatisation des réponses.</p>
+            </div>
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">Finance & Administration</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">Comptabilité, intégrations logicielles, rapports et automatisation admin.</p>
+            </div>
+            <div class="feature-card" style="padding:28px;">
+                <div style="width:40px; height:40px; border-radius:10px; background:rgba(229,125,97,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E57D61" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 style="font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:6px; color:var(--text);">Développement des affaires</h3>
+                <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-muted); line-height:1.65;">B2B, prospection, partenariats stratégiques et croissance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- POSITIONING — QUOTE BLOCK -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <div class="section-light">
+    <section style="padding:100px 24px; max-width:800px; margin:0 auto;">
+        <div class="fade-in" style="text-align:center;">
+            <div class="quote-text" style="font-family:'Fraunces',serif; font-size:28px; font-weight:600; letter-spacing:-0.02em; line-height:1.45; color:#1A1C1F; margin-bottom:28px;">
+                &laquo;&nbsp;La plupart des entrepreneurs ne réalisent pas encore ce que l'IA peut faire pour eux. Ceux qui le réalisent vivent souvent de l'anxiété ne sachant pas par où commencer. <span style="color:#E57D61;">SynchronIA est là pour ça.</span>&nbsp;&raquo;
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; gap:12px;">
+                <div style="width:40px; height:40px; border-radius:50%; background:rgba(229,125,97,0.15); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:16px; font-weight:700; color:#E57D61;">PG</div>
+                <div style="text-align:left;">
+                    <div style="font-family:'Fraunces',serif; font-size:14px; font-weight:600; color:#1A1C1F;">Pascal Gaudreau</div>
+                    <div style="font-family:'DM Sans',sans-serif; font-size:12px; color:#8B9099;">Fondateur, SynchronIA · 25 ans en consultation IT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- CTA -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <section id="contact" style="padding:120px 24px; text-align:center; position:relative; overflow:hidden;" class="grain">
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:400px; background:radial-gradient(ellipse at center, rgba(229,125,97,0.08), transparent 65%); pointer-events:none;"></div>
+
+        <div class="fade-in" style="position:relative;">
+            <h2 class="cta-title" style="font-family:'Fraunces',serif; font-size:52px; font-weight:800; letter-spacing:-0.04em; line-height:1.08; margin-bottom:16px; color:var(--text);">
+                Prêt à découvrir ce que<br>l'IA peut faire pour <span style="color:#E57D61;">vous</span> ?
+            </h2>
+            <p style="font-family:'DM Sans',sans-serif; font-size:16px; color:var(--text-muted); margin-bottom:44px; max-width:460px; margin-left:auto; margin-right:auto; line-height:1.75;">
+                Premier appel découverte gratuit et sans engagement. On évalue ensemble votre potentiel d'automatisation en 30 minutes.
+            </p>
+            <div style="display:flex; justify-content:center; gap:14px; margin-bottom:32px; flex-wrap:wrap;">
+                <a href="#" class="btn-primary" id="cta-email-btn">
+                    Réserver mon appel gratuit
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#" class="btn-secondary" id="cta-email-text"></a>
+            </div>
+            <p style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-dim);">Basé à Montréal · Disponible partout au Québec</p>
+        </div>
+    </section>
+
+    </main>
+
+    <div class="section-divider" style="max-width:1536px; margin:0 auto;"></div>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- FOOTER -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <footer style="padding:80px 24px 48px; max-width:1536px; margin:0 auto;">
+        <div class="grid-footer" style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:64px;">
+            <div>
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+                    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(-45 50 50)">
+                            <path d="M 78.5 40.7 A 30 30 0 0 0 21.5 40.7" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M 21.5 59.3 A 30 30 0 0 0 78.5 59.3" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                            <line x1="8" y1="50" x2="92" y2="50" stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="8" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                            <circle cx="50" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                            <circle cx="92" cy="50" r="6" fill="#0A0B0D" stroke="#E57D61" stroke-width="8"/>
+                        </g>
+                    </svg>
+                    <span style="font-family:'Fraunces',serif; font-size:17px; font-weight:700; color:var(--text);">Synchron<span style="color:#E57D61;">IA</span></span>
+                </div>
+                <p style="font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text-dim); line-height:1.7; max-width:280px;">Rendre l'IA accessible et concrète pour les PME francophones. Montréal, Québec.</p>
+            </div>
+
+            <div>
+                <div class="footer-heading">Services</div>
+                <a href="#services" class="footer-link" style="display:block;">Consultation & Audit IA</a>
+                <a href="#services" class="footer-link" style="display:block;">Implantation No-Code</a>
+                <a href="#services" class="footer-link" style="display:block;">Développement pro</a>
+                <a href="#methode" class="footer-link" style="display:block;">Processus d'audit</a>
+            </div>
+
+            <div>
+                <div class="footer-heading">Zones d'audit</div>
+                <a href="#zones" class="footer-link" style="display:block;">Marketing & Acquisition</a>
+                <a href="#zones" class="footer-link" style="display:block;">E-commerce</a>
+                <a href="#zones" class="footer-link" style="display:block;">Support client</a>
+                <a href="#zones" class="footer-link" style="display:block;">Finance & Admin</a>
+            </div>
+
+            <div>
+                <div class="footer-heading">Contact</div>
+                <a href="#" class="footer-link" style="display:block;" id="footer-email"></a>
+                <span class="footer-link" style="display:block; cursor:default;">Montréal, Québec</span>
+                <a href="#contact" class="footer-link" style="display:block;">Appel découverte</a>
+            </div>
+        </div>
+
+        <div style="border-top:1px solid var(--border); padding-top:24px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'DM Sans',sans-serif; font-size:13px; color:var(--text-dim);">&copy; 2026 SynchronIA · Pascal Gaudreau. Tous droits réservés.</span>
+            <!-- LinkedIn — à ajouter quand le profil sera créé -->
+        </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- STRUCTURED DATA (Schema.org) -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SynchronIA",
+        "description": "SynchronIA rend l'IA accessible et concrète pour les PME. Audit stratégique, implantation sur mesure et plan d'action 90 jours.",
+        "url": "https://synchronia.ca",
+        "logo": "https://synchronia.ca/Brand/_assets/logo.svg",
+        "founder": {
+            "@type": "Person",
+            "name": "Pascal Gaudreau"
+        },
+        "email": "pgaudrau@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Montréal",
+            "addressRegion": "QC",
+            "addressCountry": "CA"
+        },
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Québec"
+        },
+        "serviceType": [
+            "Consultation en intelligence artificielle",
+            "Audit IA pour PME",
+            "Implantation IA",
+            "Automatisation par IA"
+        ],
+        "knowsLanguage": ["fr"],
+        "priceRange": "$$"
+    }
+    </script>
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- SCROLL ANIMATION -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- HAMBURGER MENU + EMAIL OBFUSCATION -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!-- INTERACTIVE SYNAPSE NETWORK -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+    
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

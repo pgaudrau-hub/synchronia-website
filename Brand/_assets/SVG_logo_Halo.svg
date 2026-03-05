@@ -1,0 +1,38 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Halo coral externe (cercle de glow) -->
+  <circle cx="200" cy="200" r="185" fill="rgba(229,125,97,0.10)"/>
+
+  <!-- Anneau coral intermédiaire -->
+  <circle cx="200" cy="200" r="168" fill="rgba(229,125,97,0.07)"/>
+
+  <!-- Border coral subtile -->
+  <circle cx="200" cy="200" r="155" fill="#FFFFFF" stroke="#E57D61" stroke-width="2" stroke-opacity="0.30"/>
+
+  <!-- Fond blanc principal -->
+  <circle cx="200" cy="200" r="148" fill="#FFFFFF"/>
+
+  <!-- Légère ombre interne pour donner du relief -->
+  <circle cx="200" cy="200" r="148" fill="none" stroke="#EDEDED" stroke-width="1"/>
+
+  <!-- ═══ LOGO SYNCHRONIA (SVG original, centré, mis à l'échelle) ═══ -->
+  <!-- Logo original viewBox 0 0 100 100, on le place à (110,110) avec size 180×180 -->
+  <g transform="translate(110, 110) scale(1.8)">
+    <g transform="rotate(-45 50 50)">
+      <!-- Arc supérieur -->
+      <path d="M 78.5 40.7 A 30 30 0 0 0 21.5 40.7"
+            stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+      <!-- Arc inférieur -->
+      <path d="M 21.5 59.3 A 30 30 0 0 0 78.5 59.3"
+            stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+      <!-- Ligne horizontale -->
+      <line x1="8" y1="50" x2="92" y2="50"
+            stroke="#E57D61" stroke-width="8" stroke-linecap="round"/>
+      <!-- Noeuds — fill blanc pour light mode -->
+      <circle cx="8"  cy="50" r="6" fill="#FFFFFF" stroke="#E57D61" stroke-width="8"/>
+      <circle cx="50" cy="50" r="6" fill="#FFFFFF" stroke="#E57D61" stroke-width="8"/>
+      <circle cx="92" cy="50" r="6" fill="#FFFFFF" stroke="#E57D61" stroke-width="8"/>
+    </g>
+  </g>
+
+</svg>
