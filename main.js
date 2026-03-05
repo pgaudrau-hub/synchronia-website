@@ -35,11 +35,9 @@ const observer = new IntersectionObserver((entries) => {
         var addr = u + '@' + d;
         var mailto = 'mailto:' + addr;
 
-        var ctaBtn = document.getElementById('cta-email-btn');
         var ctaTxt = document.getElementById('cta-email-text');
         var footerEl = document.getElementById('footer-email');
 
-        if (ctaBtn) ctaBtn.href = mailto;
         if (ctaTxt) { ctaTxt.href = mailto; ctaTxt.textContent = 'Écrivez-nous'; }
         if (footerEl) { footerEl.href = mailto; footerEl.textContent = addr; }
     })();
