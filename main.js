@@ -17,6 +17,7 @@ const observer = new IntersectionObserver((entries) => {
                 const isOpen = menu.classList.toggle('open');
                 btn.classList.toggle('active');
                 btn.setAttribute('aria-expanded', isOpen);
+                btn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
                 document.body.style.overflow = isOpen ? 'hidden' : '';
             });
             menu.querySelectorAll('a').forEach(function(link) {
@@ -24,6 +25,7 @@ const observer = new IntersectionObserver((entries) => {
                     menu.classList.remove('open');
                     btn.classList.remove('active');
                     btn.setAttribute('aria-expanded', 'false');
+                    btn.setAttribute('aria-label', 'Ouvrir le menu');
                     document.body.style.overflow = '';
                 });
             });
@@ -53,7 +55,7 @@ const observer = new IntersectionObserver((entries) => {
         const MOUSE_RADIUS = 280;
         const PULSE_SPEED = 0.012;
 
-        let w, h, nodes = [], mouse = { x: -999, y: -999 }, dpr = 1;
+        let w, h, nodes = [], mouse = { x: -999, y: -999 }, dpr = 1, isVisible = true, rafId = null;
 
         function resize() {
             dpr = window.devicePixelRatio || 1;
@@ -212,10 +214,20 @@ const observer = new IntersectionObserver((entries) => {
         }
 
         function loop() {
+            if (!isVisible) { rafId = null; return; }
             update();
             draw();
-            requestAnimationFrame(loop);
+            rafId = requestAnimationFrame(loop);
         }
+
+        // Pause animation when canvas is off-screen
+        const canvasObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isVisible = entry.isIntersecting;
+                if (isVisible && !rafId) { rafId = requestAnimationFrame(loop); }
+            });
+        }, { threshold: 0 });
+        canvasObserver.observe(canvas);
 
         // Mouse tracking relative to canvas
         canvas.addEventListener('mousemove', (e) => {
@@ -235,5 +247,5 @@ const observer = new IntersectionObserver((entries) => {
 
         resize();
         createNodes();
-        loop();
+        rafId = requestAnimationFrame(loop);
     })();
